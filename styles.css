@@ -1,0 +1,108 @@
+:root {
+  --bg: #0e1320;
+  --card: #161b2d;
+  --text: #ffffff;
+  --accent: #2b6cff;
+}
+
+[data-theme="light"] {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  padding: 16px;
+  max-width: 420px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  position: relative;
+}
+
+.theme-toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: none;
+  font-size: 18px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 16px;
+  margin: 14px 0;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+code {
+  background: var(--bg);
+  padding: 10px;
+  display: block;
+  border-radius: 8px;
+  word-break: break-all;
+}
+
+.balance {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.actions, .trade-buttons {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+
+button.primary {
+  width: 100%;
+  font-size: 16px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.qr {
+  display: block;
+  margin: 10px auto;
+  width: 120px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 6px 0;
+  border-bottom: 1px solid #333;
+}

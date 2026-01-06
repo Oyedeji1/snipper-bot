@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Polymarket Sniper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+
+<div class="app">
+
+  <header>
+    <h1>🎯 Polymarket Sniper</h1>
+    <p id="username">Connecting...</p>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+  </header>
+
+  <!-- WALLET -->
+  <section class="card">
+    <h2>💼 Wallet</h2>
+
+    <code id="wallet-address">0x...</code>
+
+    <img id="qr" class="qr" />
+
+    <p class="balance">
+      💰 Balance: <span id="balance">$0.00</span> USDT
+    </p>
+
+    <div class="actions">
+      <button onclick="send('wallet')">🔄 Refresh</button>
+      <button onclick="send('deposit')">💸 Deposit</button>
+      <button onclick="send('withdraw_start')">💵 Withdraw</button>
+    </div>
+  </section>
+
+  <!-- TRADE -->
+  <section class="card">
+    <h2>📈 Trade</h2>
+
+    <select id="market">
+      <option>Trump Win 2024</option>
+      <option>Bitcoin > $100k</option>
+      <option>Fed Rate Cut</option>
+      <option>AI Regulation</option>
+      <option>Recession 2025</option>
+    </select>
+
+    <div class="trade-buttons">
+      <button onclick="trade(10)">$10</button>
+      <button onclick="trade(25)">$25</button>
+      <button onclick="trade(50)">$50</button>
+      <button onclick="trade(100)">$100</button>
+    </div>
+  </section>
+
+  <!-- HISTORY -->
+  <section class="card">
+    <h2>📜 Trade History</h2>
+    <ul id="history"></ul>
+  </section>
+
+  <footer>
+    <button class="primary" onclick="send('trade')">🚀 Execute Trade</button>
+  </footer>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
